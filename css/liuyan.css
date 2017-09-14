@@ -1,0 +1,303 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	font-family: "宋体";
+	color: #000;
+	/*position: relative;*/
+}
+
+
+
+
+
+/*标题链接*/
+.biaotilianjie a{
+	display: block;
+	width: 60px;
+	height: 30px;
+}
+.biaotilianjie1{
+	position: absolute;
+	width: 60px;
+	height: 30px;
+	background: red;
+	z-index: 99999;
+	left: 615px;
+	top: 70px;
+	
+	opacity: 0;
+}
+.biaotilianjie2{
+	position: absolute;
+	width: 60px;
+	height: 30px;
+	background: red;
+	z-index: 99999;
+	left: 708px;
+	top:70px;
+	opacity: 0;
+}
+
+.biaotilianjie3{
+	position: absolute;
+	width: 60px;
+	height: 30px;
+	background: red;
+	z-index: 99999;
+	left: 805px;
+	top: 70px;
+	opacity: 0;
+}
+
+.biaotilianjie4{
+	position: absolute;
+	width: 60px;
+	height: 30px;
+	background: red;
+	z-index: 99999;
+	left: 900px;
+	top: 70px;
+	opacity: 0;
+}
+
+.biaotilianjie5{
+	position: absolute;
+	width: 60px;
+	height: 30px;
+	background: red;
+	z-index: 99999;
+	left: 1005px;
+	top: 70px;
+	opacity: 0;
+}
+.biaotilianjie6{
+	position: absolute;
+	width: 60px;
+	height: 30px;
+	background: red;
+	z-index: 99999;
+	left: 1100px;
+	top: 70px;
+	opacity: 0;
+}
+
+
+
+
+
+.celandaohang{
+	width: 36px;
+	height: 100%;
+	position: fixed;
+	z-index: 10;
+	background: #202020;
+	right: 0;
+	top: 0;
+	text-align: center;
+}
+.denglu{
+	margin-top: 130px;
+}
+
+.liuyan{
+
+	margin-top: 380px;
+}
+.erweima{
+	margin-top: 20px;
+}
+.huidaodingbu{
+	cursor: pointer;
+	margin-top: 20px;
+}
+
+/*//登陆框*/
+.denglukuang{
+	display: none;
+	width: 340px;
+	height: 300px;
+	background: #FFFFFF;
+	border: 1px solid grey;
+	position: fixed;
+	z-index: 9999px;
+	right: 34px;
+	top: 130px;
+	
+}
+.tuodong{
+	cursor: move;
+	width: 100%;
+	height: 36px;
+	background: lightblue;
+}
+.tuodong img{
+	width: 30px;
+	height: 36px;
+	float: right;
+	margin-right: 10px;
+}
+.denglukuang p{
+	
+	/*overflow: hidden;*/
+	font-size: 18px;
+	font-family: "微软雅黑";
+	margin: 18px 43px;
+}
+
+.denglukuang p img{
+	margin-bottom: -8px;
+}
+.denglukuang p input{
+	display: inline-block;
+	height: 25px;
+	width: 200px;
+	/*margin-top: 30px;*/
+}
+.denglukuang .queding{
+	color: white;
+	font-size: 20px;
+	font-weight: bolder;
+	width: 180px;
+	height: 50px;
+	background: lightcoral;
+	margin-left: 80px;
+}
+.denglukuang .zhuce{
+	display: block;
+	font-weight: bold;
+	color: black;
+	font-size: 18px;
+	position: absolute;
+	text-decoration: none;
+	z-index: 3;
+	bottom: 10px;
+	right: 10px;
+	
+}
+
+
+
+
+
+
+
+#header{
+	width: 100%;
+	height: 30px;
+	background: #fffcc9;
+	border: 1px solid #e4e6e8;
+}
+#main{
+	width: 965px;
+	height: 920px;
+	/*background: lightcoral;*/
+	margin: 0 auto;
+}
+#main .top img{
+	display: block;
+	margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+#main .bottom{
+	width: 963px;
+	height: 473px;
+	background: #E4E6E8;
+	text-align: center;
+	/*background: red;*/
+}
+
+#main .bottom .left{
+	float: left;
+	border: 1px black rgba(0,0,0,1);
+	width: 215px;
+	height: 400px;
+	/*background: yellow;*/
+}
+#main .bottom img{
+	display: inline-block;
+	margin-top: 15px;
+
+}
+#main .bottom ._text{
+	margin-top: 10px;
+	margin-bottom: 3px;
+	width: 130px;
+	height: 28px;
+}
+#main .bottom ._submit{
+	width: 40px;
+	height: 28px;
+}
+
+#main .bottom .kefu{
+	margin-top: 3px;
+}
+
+
+
+#main .bottom p{
+	margin-top: 3px;
+	margin-left: 17px;
+	float: left;
+	
+}
+#main .bottom .right h1{
+	margin: 30px;
+	
+}
+
+#main .bottom .right{
+	font-family: arial;
+	font-size: 20px;
+	width: 745px;
+	height: 600px;
+	/*background: salmon;*/
+	float: right;
+}
+
+#main .bottom .right div{
+	margin: 20px;
+	
+}	
+
+#main .bottom .right input{
+	width: 250px;
+	height: 30px;
+	
+}
+
+#main .bottom .right .liuyan1{
+	width: 250px;
+	height: 140px;
+	
+}
+#main .bottom .right .tijiaoliuyan1{
+	border-radius: 3px;
+	width: 160px;
+	height: 30px;
+	font-family: arial;
+	font-size: 22px;
+	color: #fff;
+	cursor: pointer;
+	background: #5AB4FF;
+	border: none;
+}
+
+
+
+
+
+
+

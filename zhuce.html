@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/zhuce.css"/>
+	</head>
+	<body>
+			
+		<div id="celandaohang" class="celandaohang">
+			<div class="denglu"><a href="javascript:showdenglukuang();"><img src="img/21.png" /></a></div>
+			
+			<div class="liuyan"><a href="#"><img src="img/22.png" /></a></div>
+			<div class="erweima"><a href="#"><img src="img/23.png" /></a></div>
+			<div class="huidaodingbu" id="huidaodingbu"><img src="img/24.png" /></div>
+		</div>
+		
+			<!--//登陆框-->
+		<div class="denglukuang" id="denglukuang">
+			<!--拖动登陆框-->
+			<div class="tuodong" id="tuodong"><a href="javascript:hidedenglukuang();"><img src="img/guanbi.png" /></a></div>
+			<p> 账号密码登陆</p>
+			<p><img src="img/25.png""><input type="text" /></p>
+			<p><img src="img/26.png""><input type="text" /></p>
+			<input class="queding" type="button"  value="登陆"/>				
+			<a class="zhuce" href="zhuce.html">免费注册></a>
+		</div>
+			
+		
+		<div id="header"></div>
+		
+		<div class="biaotilianjie">
+			<div class="biaotilianjie1"><a href="index.html"></a></div>
+			<div class="biaotilianjie2"><a href="gongsijianjie.html"></a></div>
+			<div class="biaotilianjie3"><a href="xinwendongtai.html"></a></div>
+			<div class="biaotilianjie4"><a href="chanpinzhanshi.html"></a></div>
+			<div class="biaotilianjie5"><a href="lianxiwomen.html"></a></div>
+			<div class="biaotilianjie6"><a href="liuyan.html"></a></div>
+		</div>
+		
+		
+		
+		
+		
+		<div id="main">
+			<div onselectstart="return false" class="top">
+				<img  onselectstart="return false" src="img/xiangrikui.png"/>
+			
+				
+			<!--************登陆部分****************-->
+			<div class="bottom">
+				<div class="xinxikuang" id="xinxikuang">
+					<h1>注册帐号</h1>
+					<div class="nicheng">
+						<span>昵称</span>
+						<input class="in" type="text">
+						<p class="img"></p>
+					</div>
+					<div class="zhanghao">
+						<span>账号</span>
+						<input class="in" type="text">
+						<p class="img"></p>
+					</div>
+					<div class="mima">
+						<span>密码</span>
+						<input class="in" type="text">
+						<i class="qiangruo xianshi one">弱</i><i class="qiangruo xianshi two">中</i><i class="qiangruo xianshi three">强</i>
+						<p class="img"></p>
+					</div>
+					<div class="mima2">
+						<span>确认密码</span>
+						<input class="in" type="password">
+						<p class="img"></p>
+					</div>
+					<div class="tijiao">
+						<input class="lijizhuce" type="button" value="立即注册" />
+					</div>
+					
+				</div>
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+				<!--******************-->
+				
+				
+		</div>
+		
+		
+		<div id="footer">
+			<p><a href="#">首页</a> |<a href="#">公司简介</a> |<a href="#">联系我们</a></p>
+			<p>©2016  iou  版权所有</p>
+			<p><a href="#">手机版 | </a><a href="#">本站使用凡科建站搭建</a><a href="#"> | 管理登录</a></p>
+		</div>
+	
+	
+	
+	
+	
+	
+	
+		<script type="text/javascript">
+			//返回ID
+			function g(id){
+				return document.getElementById(id);
+			}
+			
+
+
+
+
+			//获取账号
+			window.onload = function(){
+				var alinput = g('xinxikuang').getElementsByTagName('input');
+				
+				var niCheng = alinput[0];
+				var zhangHao = alinput[1];
+				var miMa = alinput[2];
+				var miMa2 = alinput[3];
+				var aP = g('xinxikuang').getElementsByTagName('p');
+				var niCheng_msg = aP[0];
+				var zhangHao_msg = aP[1];
+				var miMa_msg = aP[2];
+				var miMa2_msg = aP[3];
+				var name_length = 0;
+				var aI = g('xinxikuang').getElementsByTagName('i');
+				var qiangruo = g('xinxikuang').getElementsByClassName('qiangruo');
+				
+				//获取输入框长度
+			function getLength(str){
+				return str.length;
+			}
+			
+			
+				//昵称处理
+				niCheng.onfocus = function(){
+					//三到七个字符
+					niCheng_msg.style.display = "block";
+					niCheng_msg.innerHTML = '<i class="tixing"></i>3-7个字符'
+					
+				}
+				niCheng.onkeyup = function(){
+					name_length = getLength(this.value);
+					
+				}
+				niCheng.onblur = function(){
+					if(name_length<3&&name_length>0){
+						niCheng_msg.innerHTML = '长度少于3个字符';
+					}
+					else if(name_length>7){
+						niCheng_msg.innerHTML = '长度大于7个字符';
+						
+					}
+					else if(name_length==0){
+						niCheng_msg.innerHTML = '不能为空';
+					}
+					else{
+						niCheng_msg.innerHTML = 'OK';
+					}
+					
+				}
+				
+				//账号处理
+				zhangHao.onfocus = function(){
+					zhangHao_msg.style.display = "block";
+					zhangHao_msg.innerHTML = '<i class="tixing"></i>6-16个字符'
+				}
+				zhangHao.onkeyup = function(){
+					name_length = getLength(this.value);
+				}
+				zhangHao.onblur = function(){
+					if(name_length<6&&name_length>0){
+						zhangHao_msg.innerHTML = '长度少于6个字符';
+					}
+					else if(name_length>16){
+						zhangHao_msg.innerHTML = '长度大于16个字符';
+					}
+					else if(name_length==0){
+						zhangHao_msg.innerHTML = '不能为空';
+					}
+					else{
+						zhangHao_msg.innerHTML = 'OK';
+					}
+				}
+				
+				
+				//密码处理
+				miMa.onfocus = function(){
+					qiangruo[0].style.display = "block";
+					qiangruo[1].style.display = "block";
+					qiangruo[2].style.display = "block";
+					miMa_msg.style.display = "block";
+					miMa_msg.innerHTML = '6-16个字符'
+					
+				}
+
+				miMa.onkeyup = function(){
+					name_length = getLength(this.value);
+					if(name_length<6){
+						aI[0].style.background = "red";
+						aI[1].style.background = "yellow";
+						aI[2].style.background = "yellow";
+					}
+					else if(name_length>=6&&name_length<=10){
+						aI[1].style.background = "red";
+						aI[0].style.background = "yellow";
+						aI[2].style.background = "yellow";
+					}
+					else if(name_length>10&&name_length<=16){
+						aI[2].style.background = "red";
+						aI[0].style.background = "yellow";
+						aI[1].style.background = "yellow";
+						
+					}
+				}
+				miMa.onblur = function(){
+					if(name_length<6&&name_length>0){
+						miMa_msg.innerHTML = '长度少于6个字符';	
+					}
+					
+					else if(name_length>16){
+						miMa_msg.innerHTML = '长度大于16个字符';
+					}
+					else if(name_length==0){
+						miMa_msg.innerHTML = '不能为空';
+					}
+					else{
+						miMa_msg.innerHTML = 'OK';
+					}
+				}
+				
+				
+				//确认密码
+				miMa2.onfocus = function(){
+					miMa2_msg.style.display = "block";
+					miMa2_msg.innerHTML = '请再次输入密码';
+				}
+				miMa2.onkeyup = function(){
+					name_length = getLength(this.value);
+				}
+				miMa2.onblur = function(){
+					if(this.value != miMa.value){
+						miMa2_msg.innerHTML = '两次输入的密码不一致';
+					}
+					else if(name_length == 0){
+						miMa2_msg.innerHTML = '不能为空';
+					}
+					else{
+						miMa2_msg.innerHTML = 'OK';
+					}
+				}
+				
+				
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			//回到顶部
+			var huidaodingbu = document.getElementById('huidaodingbu');
+			huidaodingbu.onclick = function(){
+				var h = document.documentElement.scrollTop = document.body.scrollTop
+				var htimer = setInterval(function(){ 
+					
+					document.documentElement.scrollTop = document.body.scrollTop -= 200;
+					if(document.documentElement.scrollTop || document.body.scrollTop ==0)
+					{
+						clearInterval(htimer);
+					}
+				},20)
+			}
+			
+				//登陆框移动
+			var mouseOffsetX = 0;
+			var mouseOffsetY = 0;
+			var isDraging = false;
+			//鼠标按下
+			g('tuodong').addEventListener('mousedown',function(e){
+				var e =  e || window.event;
+				mouseOffsetX = e.pageX - g('denglukuang').offsetLeft;
+				mouseOffsetY = e.pageY - g('denglukuang').offsetTop;
+				isDraging = true;
+			})
+			//鼠标移动
+			document.onmousemove = function(e){
+				var e =  e || window.event;
+				var mouseX = e.pageX;
+				var mouseY = e.pageY;
+				var moveX = 0;
+				var moveY = 0;
+				
+				if(isDraging === true){
+					moveX = mouseX - mouseOffsetX;
+					moveY = mouseY - mouseOffsetY;
+					g('denglukuang').style.left = moveX + 'px';
+					g('denglukuang').style.top = moveY + 'px';
+				}
+			}
+			//鼠标松开
+			document.onmouseup = function(){
+				isDraging = false
+			}
+			
+			
+			//展示登陆框
+			function showdenglukuang(){
+				g('denglukuang').style.display = "block";
+			}
+			
+			//关闭登陆框
+			function hidedenglukuang(){
+				g('denglukuang').style.display = "none";
+			}
+			
+		</script>
+	
+	
+	
+	
+	
+	
+	</body>
+</html>

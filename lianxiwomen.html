@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/chushihua.css"/>
+	</head>
+	<body>
+		<div id="header"></div>
+		<div class="biaotilianjie">
+			<div class="biaotilianjie1"><a href="index.html"></a></div>
+			<div class="biaotilianjie2"><a href="gongsijianjie.html"></a></div>
+			<div class="biaotilianjie3"><a href="xinwendongtai.html"></a></div>
+			<div class="biaotilianjie4"><a href="chanpinzhanshi.html"></a></div>
+			<div class="biaotilianjie5"><a href="lianxiwomen.html"></a></div>
+			<div class="biaotilianjie6"><a href="liuyan.html"></a></div>
+		</div>
+		
+		<div id="celandaohang" class="celandaohang">
+			<div class="denglu"><a href="javascript:showdenglukuang();"><img src="img/21.png" /></a></div>
+			
+			<div class="liuyan"><a href="#"><img src="img/22.png" /></a></div>
+			<div class="erweima"><a href="#"><img src="img/23.png" /></a></div>
+			<div class="huidaodingbu" id="huidaodingbu"><img src="img/24.png" /></div>
+		</div>
+		<!--//登陆框-->
+		<div class="denglukuang" id="denglukuang">
+			<!--拖动登陆框-->
+			<div class="tuodong" id="tuodong"><a href="javascript:hidedenglukuang();"><img src="img/guanbi.png" /></a></div>
+			<p> 账号密码登陆</p>
+			<p><img src="img/25.png""><input type="text" /></p>
+			<p><img src="img/26.png""><input type="text" /></p>
+			<input class="queding" type="button"  value="登陆"/>				
+			<a class="zhuce" href="zhuce.html">免费注册></a>
+		</div>
+			
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<div id="main">
+			<div onselectstart="return false" class="top">
+				<img  onselectstart="return false" src="img/xiangrikui.png"/>
+			</div>
+			<div class="bottom">
+				
+			</div>
+		</div>
+			
+			
+			
+			
+			
+			
+			
+		<script type="text/javascript">
+			//返回ID
+			function g(id){
+				return document.getElementById(id);
+			}
+			
+			//回到顶部
+			var huidaodingbu = document.getElementById('huidaodingbu');
+			huidaodingbu.onclick = function(){
+				var h = document.documentElement.scrollTop = document.body.scrollTop
+				var htimer = setInterval(function(){ 
+					
+					document.documentElement.scrollTop = document.body.scrollTop -= 200;
+					if(document.documentElement.scrollTop || document.body.scrollTop ==0)
+					{
+						clearInterval(htimer);
+					}
+				},20)
+			}
+			
+				//登陆框移动
+			var mouseOffsetX = 0;
+			var mouseOffsetY = 0;
+			var isDraging = false;
+			//鼠标按下
+			g('tuodong').addEventListener('mousedown',function(e){
+				var e =  e || window.event;
+				mouseOffsetX = e.pageX - g('denglukuang').offsetLeft;
+				mouseOffsetY = e.pageY - g('denglukuang').offsetTop;
+				isDraging = true;
+			})
+			//鼠标移动
+			document.onmousemove = function(e){
+				var e =  e || window.event;
+				var mouseX = e.pageX;
+				var mouseY = e.pageY;
+				var moveX = 0;
+				var moveY = 0;
+				
+				if(isDraging === true){
+					moveX = mouseX - mouseOffsetX;
+					moveY = mouseY - mouseOffsetY;
+					g('denglukuang').style.left = moveX + 'px';
+					g('denglukuang').style.top = moveY + 'px';
+				}
+			}
+			//鼠标松开
+			document.onmouseup = function(){
+				isDraging = false
+			}
+			
+			
+			//展示登陆框
+			function showdenglukuang(){
+				g('denglukuang').style.display = "block";
+			}
+			
+			//关闭登陆框
+			function hidedenglukuang(){
+				g('denglukuang').style.display = "none";
+			}
+			
+		</script>
+			
+			
+	</body>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</html>
